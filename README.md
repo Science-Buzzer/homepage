@@ -1,6 +1,22 @@
 # homepage
 Let's make the website's [homepage](https://www.outre.ml) the best.
-
+###### Contents
+1. [Basic Idea](#basic-idea)
+2. [S1](#s1)
+3. [S2](#s2)
+4. [S3](#s3)
+    1. [featured-post](#featured-post)
+    2. [stamp-posts](#stamp-posts)
+5. [navbar](#navbar)
+6. [footer](#footer)
+7. [Miscellaneous](#miscellaneous)
+8. [Resources](#resources)
+    1. [Accent Colors](#accent-colors)
+    2. [Accent Gradient](#accent-gradient)
+    3. [Accent Shadow](#accent-shadow)
+    4. [Animated](#animated)
+    5. [No Dec](#no-dec)
+    6. [Continue Arrow](#continue-arrow)
 ## Basic Idea
 The homepage consists of three sections besides the *navbar* and *footer*. Currently, those sections are simply named *S1*, *S2* and *S3*. The three sections have a sort of snapping enabled which we call **scroll-snapping**.
 ## S1
@@ -18,7 +34,7 @@ This section is for featuring posts. A *featured-post* is at the top covering th
 - *stamp-post* consists of a div with the background as featured post image. Div has the post title as *title*.
 - *title* is also made of *accent gradient* and *accent shadow*. It is aligned bottom.
 ## navbar
-A ribbon colored with the lighter accent color with 0.9 opacity. For supported browsers it also has `backdrop-filter: saturate(180%) blur(20px)`. It consists of *Logo*(`animated` and `no-decoration`), *Issues* and *Random Cure* which is currently powered a WordPress plugin.
+A ribbon colored with the lighter accent color with 0.9 opacity. For supported browsers it also has `backdrop-filter: saturate(180%) blur(20px)`. It consists of *Logo*(`animated` and `no-dec`), *Issues* and *Random Cure* which is currently powered a WordPress plugin.
 ## footer
 A simple HTML-only black ribbon at the bottom of the webpage. It currently consists of licensing data.
 ## Miscellaneous
@@ -44,6 +60,8 @@ Elements with class *animated* will be give this animation by default on hover: 
   100% {color: #fff}
 }
 ```
-We reccomand using this for *continue-arrows*.
+We recommend using this for *continue-arrows*.
+#### No Dec
+By default, links will get `text-decoration: underline`. Adding class `no-dec` to any element overrides this rule.
 #### Continue Arrow
 It is recommended to include this arrow after links. `\2192`.
