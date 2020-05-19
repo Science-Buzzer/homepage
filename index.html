@@ -547,37 +547,35 @@
         }
     </style>
     <script>
-        let x = document.querySelector(".navbar");
-
-        function responsiver() {
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        };
-        window.onscroll = function () {
-            scrollSnap();
-            x.style.backgroundColor = '#0bfa';
-            x.style.backdropFilter = 'saturate(180%) blur(20px)';
-        };
+        let navbar = document.querySelector(".navbar");
         const winHeight = document.documentElement.clientHeight;
         let snap1 = 1;
         let snap2 = 1;
 
-        function scrollSnap() {
-            if (snap1 === 1) {
-                if ((document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
-                    window.scrollTo(0, winHeight);
-                    snap1 = 0;
-                }
-            } else if (snap2 === 1) {
-                if ((document.body.scrollTop > (winHeight + 50) || document.documentElement.scrollTop > (winHeight +
-                        50))) {
-                    window.scrollTo(0, (2 * winHeight));
-                    snap2 = 0;
-                }
+        function responsiver() {
+            if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+                return;
             }
+            navbar.className = "navbar";
         }
+
+        function scrollSnap() {
+            if ((snap1 === 1) && (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
+                window.scrollTo(0, winHeight);
+                snap1 = 0;
+                return;
+            };
+            if ((snap2 === 1) && (document.body.scrollTop > (winHeight + 50) || document.documentElement.scrollTop > (winHeight + 50))) {
+                window.scrollTo(0, (2 * winHeight));
+                snap2 = 0;
+            };
+        };
+
+        window.onscroll = () => {
+            scrollSnap();
+            navbar.style.backgroundColor = '#0bfa';
+            navbar.style.backdropFilter = 'saturate(180%) blur(20pnavbar)';
+        };
     </script>
 </body>
