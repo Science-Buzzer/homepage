@@ -1,0 +1,483 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #eee;
+    color: #0078d7;
+    padding: 8px;
+    z-index: 9999999
+}
+
+.skip-link:focus {
+    top: 0
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+a.animated:hover,
+a.no-dec:hover {
+    text-decoration: none
+}
+
+a.animated:hover {
+    animation: color_change 1s infinite
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif
+}
+
+:focus {
+    font-style: italic;
+    outline: 0;
+    text-decoration: underline !important;
+    border: 2px #424242 solid !important
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #225
+}
+
+::-webkit-scrollbar-button {
+    display: none
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0bf, #066bff);
+    border-radius: 10px;
+    box-shadow: inset 3px -3px 5px -2px #0004
+}
+
+::selection {
+    background-color: #ffff;
+    color: #fff;
+    text-shadow: none
+}
+
+.navbar {
+    background-color: #0000;
+    backdrop-filter: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px;
+    overflow: hidden;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 64px;
+    user-select: none;
+    transition: height linear .2s
+}
+
+.navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px;
+    display: inline-block;
+    text-align: center
+}
+
+.navbar a:hover {
+    text-decoration: underline
+}
+
+.navbar .hamburger {
+    display: none
+}
+
+.links {
+    float: right
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+}
+
+.logo-text a:hover {
+    text-decoration: none
+}
+
+.hamburger {
+    justify-self: right
+}
+
+.logo {
+    text-align: center
+}
+
+.logo:hover {
+    animation: color_change 3s infinite
+}
+
+@keyframes color_change {
+    0% {
+        color: #fff
+    }
+
+    25% {
+        color: #ff6a82
+    }
+
+    50% {
+        color: #ff0
+    }
+
+    75% {
+        color: #75d8ff
+    }
+
+    100% {
+        color: #fff
+    }
+}
+
+.bg-image {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#s1 {
+    background: url(https://assets1.outre.ml/1024px-Gull_Lake_Mammoth_September_2016_panorama%20optimised.jpg) #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#s2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.issue-cover {
+    background: url(https://assets1.outre.ml/title22.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 500;
+    width: 60vh;
+    height: 75vh;
+    align-self: center;
+    box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
+    margin: 10px
+}
+
+.issue-text {
+    z-index: 501;
+    width: 40%;
+    height: 500px;
+    align-self: center;
+    color: #fff;
+    padding: 10px
+}
+
+#s2 {
+    background: #222
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: capitalize
+}
+
+.desc {
+    font-size: 30px;
+    font-weight: 400;
+    display: inline;
+    vertical-align: middle
+}
+
+#s3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden
+}
+
+.stamp-posts {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 40%
+}
+
+.stamp {
+    width: 47%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0 20px 45px -20px #066bff
+}
+
+.stamp .title {
+    background: linear-gradient(to bottom, #0bf, #066bff);
+    height: fit-content;
+    padding: 20px;
+    overflow: hidden;
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    margin-top: auto
+}
+
+.stamp1 {
+    background: url(https://assets2.outre.ml/pubg-facts-1-455x320.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.stamp2 {
+    background: url(https://assets2.outre.ml/top-5-apps-768x552.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.features {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #0bf, #066bff);
+    box-shadow: 0 12px 45px -8px #066bff
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 20px 10px 20px
+}
+
+.feature-text {
+    width: 60%
+}
+
+.feature-text .title {
+    font-weight: 700;
+    font-size: 40px
+}
+
+.feature-text .desc {
+    font-size: 20px;
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.feature-image {
+    height: 100%;
+    background: url(https://assets1.outre.ml/egg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15%;
+    display: block;
+    margin: 0 20px 0 0
+}
+
+.quote {
+    display: block;
+    text-align: center;
+    max-width: 70%;
+    width: fit-content;
+    color: #fff;
+    font-size: 75px;
+    text-shadow: 0 0 20px #000
+}
+
+.cure {
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(to bottom, #0bf, #066bff);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+    height: 50px;
+    user-select: none;
+    transition: box-shadow linear .2s
+}
+
+.cure:focus,
+.cure:hover {
+    text-decoration: underline;
+    box-shadow: 0 12px 45px -8px #000
+}
+
+#s1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#footer {
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2px;
+    background: #222;
+    font-size: 12px;
+    display: inline-block;
+    width: 100%
+}
+
+#footer a {
+    text-decoration: underline
+}
+
+@media screen and (max-width:700px) {
+    .navbar {
+        height: 41px
+    }
+
+    .navbar a {
+        display: none
+    }
+
+    .navbar a.logo {
+        display: block
+    }
+
+    .navbar a.hamburger {
+        display: block
+    }
+
+    .logo-text {
+        width: 100%
+    }
+
+    .navbar.responsive {
+        position: fixed;
+        top: 0;
+        background: #0bfa;
+        backdrop-filter: saturate(180%) blur(20px);
+        flex-direction: column;
+        max-height: unset;
+        height: 117px
+    }
+
+    .navbar.responsive a.hamburger {
+        display: inline-block
+    }
+
+    .navbar.responsive a {
+        display: block;
+        text-align: left
+    }
+
+    .navbar.responsive .links {
+        align-self: flex-start
+    }
+
+    .title {
+        font-size: 30px
+    }
+
+    .desc {
+        font-size: 18px
+    }
+
+    #s2 {
+        flex-direction: column;
+        padding-top: 100px
+    }
+
+    .issue-text {
+        text-align: center;
+        margin-top: 10px
+    }
+
+    .issue-cover {
+        margin: 0;
+        width: 200px
+    }
+
+    .feature {
+        display: block;
+        padding: 10px
+    }
+
+    .feature-image {
+        display: none
+    }
+
+    .feature-text {
+        text-align: center;
+        width: 100%;
+        height: 100%
+    }
+
+    .feature-text .title::after {
+        content: '\2192'
+    }
+
+    .feature-text .title {
+        margin: 0;
+        font-size: 30px
+    }
+
+    .feature-text .desc {
+        display: none
+    }
+
+    .quote {
+        font-size: 40px
+    }
+
+    .stamp {
+        background: 0 0;
+        height: 100%;
+        display: block
+    }
+
+    .stamp .title {
+        font-size: 20px;
+        height: 100%
+    }
+}
